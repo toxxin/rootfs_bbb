@@ -58,3 +58,7 @@ LC_ALL=C LANGUAGE=C LANG=C chroot $TARGET_ROOTFS_DIR apt-get clean
 cp ./base-files/etc/nginx/sites-available/default ${TARGET_ROOTFS_DIR}/etc/nginx/sites-available
 cp ./base-files/root/* ${TARGET_ROOTFS_DIR}/root
 cp ./base-files/var/www/html/index.php ${TARGET_ROOTFS_DIR}/var/www/html
+
+#Add uwsgi log files
+touch ${TARGET_ROOTFS_DIR}/var/log/uwsgi/kkweb.log
+touch ${TARGET_ROOTFS_DIR}/var/log/uwsgi/uwsgi.log
